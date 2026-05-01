@@ -341,8 +341,9 @@ class _MainScreenState extends State<MainScreen> {
                   itemCount: _messages.length,
                   itemBuilder: (context, index) {
                     final msg = _messages[index];
-                    if (msg["type"] == "carousel")
+                    if (msg["type"] == "carousel") {
                       return _buildCarousel(setModalState);
+                    }
                     return _buildChatBubble(
                       msg["text"],
                       msg["isMe"],
